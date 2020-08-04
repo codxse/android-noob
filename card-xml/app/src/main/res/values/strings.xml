@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Card XML</string>
+    <string name="top_heading">My First Android Layout</string>
+    <string name="top_subtitle">OK, so this is my first android layout. Do not judge</string>
+</resources>
