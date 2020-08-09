@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="main_calc_button_size">48dp</dimen>
+    <dimen name="half">8dp</dimen>
+    <dimen name="one">16dp</dimen>
+    <dimen name="one_half">24dp</dimen>
+    <dimen name="two">32</dimen>
+</resources>
