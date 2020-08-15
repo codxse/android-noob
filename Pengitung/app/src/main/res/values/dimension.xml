@@ -4,5 +4,5 @@
     <dimen name="half">8dp</dimen>
     <dimen name="one">16dp</dimen>
     <dimen name="one_half">24dp</dimen>
-    <dimen name="two">32</dimen>
+    <dimen name="two">32dp</dimen>
 </resources>
