@@ -3,7 +3,6 @@ package id.nadiar.android.diceroller
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.Toast
 import android.widget.TextView
 import kotlin.random.Random
 
