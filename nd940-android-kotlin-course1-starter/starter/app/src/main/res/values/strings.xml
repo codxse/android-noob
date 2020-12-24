@@ -11,4 +11,15 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="email_placeholder">nadiar429@gmail.com</string>
+    <string name="password">********</string>
+    <string name="password_placeholder">********</string>
+    <string name="login_text_label">Login to Account</string>
+    <string name="avatar_image_description">avatar image</string>
+    <string name="register_text_as_button">or create new Account</string>
+    <string name="welcome_user_desc">Hi, welcome to Shoe Stroe app. You can brwose, pick, and buy your next awsome shoes!</string>
+    <string name="welcome_user_title_label">Welcome {{User}}</string>
+    <string name="next_button_label">Next</string>
+    <string name="instruction_user_title">As simple as</string>
+    <string name="intruction_user_description">Pick shoes you like to, click buy button, and your shoes are ready to deliver.</string>
 </resources>

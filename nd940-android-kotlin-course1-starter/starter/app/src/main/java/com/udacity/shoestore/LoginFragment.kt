@@ -21,7 +21,10 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentLoginBinding>(inflater, R.layout.fragment_login, container, false)
-        binding.loginButton.setOnClickListener {
+        binding.buttonLogin.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_loginFragment_to_onboardingFragment)
+        }
+        binding.registerTextAsButton.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.action_loginFragment_to_onboardingFragment)
         }
         return binding.root

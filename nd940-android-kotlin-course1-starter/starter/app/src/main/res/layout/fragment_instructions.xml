@@ -5,20 +5,34 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="match_parent"
+            style="@style/text_title_style"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Onboarding 2" />
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:text="@string/instruction_user_title" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="32dp"
+            android:text="@string/intruction_user_description"
+            style="@style/text_description_style" />
 
         <Button
             android:id="@+id/instructionsButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Button"
-            tools:visibility="visible" />
+            android:layout_gravity="center"
+            android:text="@string/next_button_label"
+            tools:visibility="visible"
+            style="@style/button_style"  />
     </LinearLayout>
 
 </layout>
