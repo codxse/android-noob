@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.core.view.marginLeft
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
@@ -36,10 +37,16 @@ class ShoeListingFragment : Fragment() {
         }
 
         Log.i("ShoeListingViewModel", "called ViewModelProvider")
+
+
         viewModel = ViewModelProvider(this).get(ShoeListingViewModel::class.java)
 
         viewModel.shoes.observe(viewLifecycleOwner, Observer {
+            shoeFromArgs()?.let { shoe ->
+                it.add(shoe)
+            }
             drawShoesList(binding.shoesContainer, it)
+            arguments?.clear()
         })
 
         return binding.root
@@ -69,5 +76,18 @@ class ShoeListingFragment : Fragment() {
                 container.addView(divider)
             }
         }
+    }
+
+    fun shoeFromArgs(): Shoe? {
+        arguments?.let {
+            Log.i("ARGS", it.size().toString())
+            if (it.size() == 4) {
+                val args = ShoeListingFragmentArgs.fromBundle(it)
+                // Toast.makeText(context, "name ${args?.name}, size ${args?.size}, company ${args?.company}, desc ${args?.description}", Toast.LENGTH_SHORT).show()
+                val shoe = Shoe(name = args.name.toString(), size = args.size.toString().toDouble(), company = args.company.toString(), description = args.description.toString())
+                return shoe
+            }
+        }
+        return null
     }
 }

@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import com.udacity.shoestore.databinding.FragmentOnboardingBinding
 
 /**
@@ -22,7 +23,7 @@ class OnboardingFragment : Fragment() {
         // Inflate the layout for this fragment
         val binding = DataBindingUtil.inflate<FragmentOnboardingBinding>(inflater, R.layout.fragment_onboarding, container, false)
         binding.onboardingButton.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.action_onboardingFragment_to_instructionsFragment)
+            it.findNavController().navigate(OnboardingFragmentDirections.actionOnboardingFragmentToInstructionsFragment())
         }
         return binding.root
     }
