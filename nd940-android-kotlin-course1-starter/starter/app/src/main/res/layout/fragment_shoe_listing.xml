@@ -35,31 +35,19 @@
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
-
             app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
+            <LinearLayout
+                android:id="@+id/shoesContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-            <!--    <ScrollView-->
-            <!--        android:id="@+id/shoes_listing_scroll"-->
-            <!--        android:layout_width="match_parent"-->
-            <!--        android:layout_height="match_parent">-->
-
-            <!--        <LinearLayout-->
-            <!--            android:layout_width="match_parent"-->
-            <!--            android:layout_height="wrap_content"-->
-            <!--            android:orientation="vertical">-->
-
-            <!--            <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-            <!--                android:id="@+id/floating_add_btn"-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:layout_margin="16dp"-->
-            <!--                android:layout_gravity="end|bottom"-->
-            <!--                android:src="@drawable/ic_add" />-->
-            <!--        </LinearLayout>-->
-            <!--    </ScrollView>-->
-
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Name" />
+            </LinearLayout>
 
         </androidx.core.widget.NestedScrollView>
 

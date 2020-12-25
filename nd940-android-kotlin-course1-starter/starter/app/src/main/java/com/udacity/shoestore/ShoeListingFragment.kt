@@ -1,15 +1,20 @@
 package com.udacity.shoestore
+import android.app.ActionBar
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import androidx.core.view.marginLeft
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.udacity.shoestore.databinding.FragmentShoeListingBinding
+import com.udacity.shoestore.models.Shoe
+import kotlinx.android.synthetic.main.fragment_shoe_listing.*
 
 /**
  * A simple [Fragment] subclass.
@@ -34,9 +39,35 @@ class ShoeListingFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(ShoeListingViewModel::class.java)
 
         viewModel.shoes.observe(viewLifecycleOwner, Observer {
-            // TODO("Present data to UI")
+            drawShoesList(binding.shoesContainer, it)
         })
 
         return binding.root
+    }
+
+    fun drawShoesList(container: ViewGroup?, shoes: MutableList<Shoe>) {
+        if (container != null) {
+            for (shoe in shoes) {
+                val shoeName = TextView(context)
+                shoeName.text = shoe.name
+                container.addView(shoeName)
+
+                val shoeCompany = TextView(context)
+                shoeCompany.text = shoe.company
+                container.addView(shoeCompany)
+
+                val shoeSize = TextView(context)
+                shoeSize.text = shoe.size.toString()
+                container.addView(shoeSize)
+
+                val shoeDescription = TextView(context)
+                shoeDescription.text = shoe.description
+                container.addView(shoeDescription)
+
+                val divider = View(context)
+                divider.setPadding(8, 3, 8, 16)
+                container.addView(divider)
+            }
+        }
     }
 }
