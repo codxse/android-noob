@@ -1,6 +1,7 @@
 package com.udacity.shoestore
 
 import android.util.Log
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.udacity.shoestore.models.*
@@ -29,6 +30,8 @@ val SHOE3 = Shoe(name = "Nike Adapt BB", size = 42.0, company = "Nike", descript
 
 class ShoeListingViewModel : ViewModel() {
     private val _shoes = MutableLiveData<MutableList<Shoe>>()
+    val shoes: LiveData<MutableList<Shoe>>
+        get() = _shoes
 
     init {
         Log.i("ShoeListingViewModel", "ShoeListingViewModel created")
@@ -38,9 +41,6 @@ class ShoeListingViewModel : ViewModel() {
         initShoes.add(SHOE3)
         _shoes.value = initShoes
     }
-
-    val shoes: MutableLiveData<MutableList<Shoe>>
-        get() = _shoes
 
     fun addShoe(shoe: Shoe) = _shoes.value?.add(shoe)
 

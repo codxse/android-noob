@@ -26,7 +26,7 @@ class ShoeListingFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val binding = DataBindingUtil.inflate<FragmentShoeListingBinding>(inflater, R.layout.fragment_shoe_listing, container, false)
-        binding.shoeListingButton.setOnClickListener {
+        binding.floatingAddBtn.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.action_shoeListingFragment_to_shoeDetailFragment)
         }
 
@@ -34,7 +34,7 @@ class ShoeListingFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(ShoeListingViewModel::class.java)
 
         viewModel.shoes.observe(viewLifecycleOwner, Observer {
-            TODO("Present data to UI")
+            // TODO("Present data to UI")
         })
 
         return binding.root
