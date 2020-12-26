@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ShoeListingFragment">
 
+    <!-- CoordinatorLayout Start -->
     <androidx.coordinatorlayout.widget.CoordinatorLayout
 
 
@@ -37,6 +38,7 @@
             android:layout_height="match_parent"
             app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
+            <!-- Linear Layout as shoe Container start -->
             <LinearLayout
                 android:id="@+id/shoesContainer"
                 android:layout_width="match_parent"
@@ -48,6 +50,7 @@
                     android:layout_height="wrap_content"
                     tools:text="Name" />
             </LinearLayout>
+            <!-- Linear Layout as shoe Container end -->
 
         </androidx.core.widget.NestedScrollView>
 
@@ -60,4 +63,5 @@
             android:src="@drawable/ic_add" />"
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <!-- CoordinatorLayout End -->
 </layout>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".LoginFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!-- ConstraintLayout Start -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/loginConstraint"
         android:layout_width="match_parent"
@@ -89,4 +89,6 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- ConstraintLayout End -->
+
 </layout>

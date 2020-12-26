@@ -3,6 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ShoeDetailFragment">
 
+    <data>
+        <variable
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
+    <!-- LinearLayout Start -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -22,6 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
+            android:text="@={shoe.name}"
             android:hint="Nike 300" />
 
         <TextView
@@ -35,6 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
+            android:text="@={shoe.company}"
             android:hint="Nike" />
 
         <TextView
@@ -49,6 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:hint="42"
+            android:text="@={shoe.size}"
             android:inputType="numberDecimal" />
 
         <TextView
@@ -62,6 +71,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
+            android:text="@={shoe.description}"
             android:hint="my running shoes" />
 
         <Button
@@ -82,5 +92,6 @@
 
 
     </LinearLayout>
+    <!-- LinearLayout End -->
 
 </layout>

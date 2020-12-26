@@ -42,22 +42,11 @@
         <action
             android:id="@+id/action_shoeListingFragment_to_shoeDetailFragment"
             app:destination="@id/shoeDetailFragment" />
-        <argument
-            android:name="name"
-            app:argType="string"
-            app:nullable="true" />
-        <argument
-            android:name="size"
-            app:argType="string"
-            app:nullable="true" />
-        <argument
-            android:name="company"
-            app:argType="string"
-            app:nullable="true" />
-        <argument
-            android:name="description"
-            app:argType="string"
-            app:nullable="true" />
+        <action
+            android:id="@+id/action_shoeListingFragment_to_loginFragment2"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/shoeDetailFragment"
