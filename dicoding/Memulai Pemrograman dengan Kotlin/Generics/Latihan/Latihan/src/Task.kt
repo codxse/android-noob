@@ -1,3 +1,5 @@
+import kotlin.reflect.typeOf
+
 /**
  * Untuk menyelesaikan tugas latihan, Anda tidak diperbolehkan mengubah struktur kode yang sudah ada. Kecuali:
  *    - Untuk melakukan improvisasi kode
@@ -12,10 +14,17 @@ fun main() {
     val intResult = getResult(100)
 
     // TODO 2
-    println()
+    println("String result: $stringResult")
+    println("Int result: $intResult")
 }
 
 // TODO 1
 fun <T> getResult(args: T): Int {
+    if (args is Int) {
+        return args * 5
+    }
+    if (args is String) {
+        return args.length
+    }
     return 0
 }

@@ -3,29 +3,29 @@ files:
 - name: src/Task.kt
   visible: true
   placeholders:
-  - offset: 381
-    length: 9
+  - offset: 411
+    length: 77
     placeholder_text: println()
     initial_state:
       length: 9
       offset: 381
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |-
       println("""
               String result: $stringResult
               Int result: $intResult
           """.trimIndent())
-  - offset: 442
-    length: 8
+  - offset: 540
+    length: 120
     placeholder_text: return 0
     initial_state:
       length: 8
       offset: 442
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |-
       return when (args) {
               is Int -> args * 5
@@ -98,5 +98,8 @@ files:
         fun test8() = checkFunction(100110)
     }
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Mon, 01 Nov 2021 01:04:46 UTC
 record: -1
