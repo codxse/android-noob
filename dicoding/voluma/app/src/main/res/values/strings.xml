@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Voluma</string>
+    <string name="height">Tinggi</string>
+    <string name="length">Lebar</string>
+    <string name="width">Panjang</string>
+    <string name="calculate">Hitung</string>
+    <string name="result">Hasil</string>
+</resources>
